@@ -48,5 +48,11 @@
 			var postContent = File.ReadAllLines("../../TestSite/_site/2011/07/25/title-and-date/index.html");
 			postContent.ShouldEqual(new[] { "Foo", "Posted on: 25/07/2011 00:00:00" });
 		}
+
+		[Test]
+		public void MarkdownTests() {
+			var postContent = File.ReadAllLines("../../TestSite/_site/2011/07/25/simple-markdown/index.html");
+			postContent.ShouldEqual(new[] { "Layout", "<h1>Test 1 2 3</h1>", "", "End Layout" });
+		}
 	}
 }

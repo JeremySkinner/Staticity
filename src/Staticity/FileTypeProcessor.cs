@@ -5,6 +5,7 @@
 	using System.IO;
 	using Castle.Components.Common.TemplateEngine;
 	using Castle.Components.Common.TemplateEngine.NVelocityTemplateEngine;
+	using MarkdownSharp;
 
 	public class FileTypeProcessor {
 		readonly string basePath;
@@ -39,6 +40,7 @@
 			viewData["content"] = bodyContent;
 
 			if(layout != null) {
+				viewData["isLayout"] = true;
 				string[] layoutContent = File.ReadAllLines(Path.Combine(basePath, "_layouts", layout + ".html"));
 				bodyContent = RecursiveApplyTemplate(layoutContent, viewData);
 			}
@@ -47,7 +49,7 @@
 		}
 
 
-		string RenderTemplate(string path, string content, Dictionary<string, object> viewData) {
+		protected virtual string RenderTemplate(string path, string content, Dictionary<string, object> viewData) {
 			string output;
 			using (var writer = new StringWriter()) {
 				var context = new Hashtable();
@@ -61,6 +63,19 @@
 			}
 			return output;
 		}
+	}
+
+	public class MarkdownProcessor : FileTypeProcessor {
+		public MarkdownProcessor(string basePath) : base(basePath) {
+		}
+
+		protected override string RenderTemplate(string path, string content, Dictionary<string, object> viewData) {
+			if (!viewData.ContainsKey("isLayout")) {
+				content = new Markdown().Transform(content);
+			}
+			return base.RenderTemplate(path, content, viewData);
+		}
+
 	}
 
 

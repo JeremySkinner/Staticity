@@ -22,7 +22,8 @@
 			}
 
 			_fileTypes = new Dictionary<string, FileTypeProcessor> {
-				{ ".html", new FileTypeProcessor(basePath) }
+				{ ".html", new FileTypeProcessor(basePath) },
+				{ ".md", new MarkdownProcessor(basePath) }
 			};
 
 
