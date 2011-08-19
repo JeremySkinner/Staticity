@@ -83,6 +83,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestSite\_posts\2011-07-25-syntaxmd.md" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

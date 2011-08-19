@@ -63,5 +63,14 @@
 			StringAssert.StartsWith("<pre class=\"csharp\" style=\"font-family:monospace;\"><span style=\"color: #FF0000;\">class</span>", postContent[1]);
 			StringAssert.EndsWith("</div></div>", postContent.Last());
 		}
+
+		[Test]
+		public void SyntaxHighlight_markdown() {
+			var postContent = File.ReadAllLines("../../TestSite/_site/2011/07/25/syntaxmd/index.html");
+			postContent[0].ShouldEqual("<h1>Test 1 2 3</h1>");
+			postContent[2].ShouldEqual("<div class=\"syntax\"><div class=\"code\">");
+			StringAssert.StartsWith("<pre class=\"csharp\" style=\"font-family:monospace;\"><span style=\"color: #FF0000;\">class</span>", postContent[3]);
+			StringAssert.EndsWith("</div></div>", postContent.Last());
+		}
 	}
 }

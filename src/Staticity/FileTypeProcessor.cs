@@ -69,6 +69,7 @@
 
 		protected override string RenderTemplate(string path, string content, Dictionary<string, object> viewData) {
 			if (!viewData.ContainsKey("isLayout")) {
+				content = base.RenderTemplate(path, content, viewData);
 				content = new Markdown().Transform(content);
 			}
 			return base.RenderTemplate(path, content, viewData);
