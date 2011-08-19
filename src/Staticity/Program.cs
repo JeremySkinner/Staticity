@@ -10,6 +10,8 @@ namespace Staticity {
 
 			var engine = new StaticityEngine();
 			engine.Process(Environment.CurrentDirectory);
+
+			Console.WriteLine("All done.");
 		}
 	}
 }

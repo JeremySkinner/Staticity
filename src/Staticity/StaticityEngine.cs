@@ -47,6 +47,7 @@
 
 
 			foreach(var file in files) {
+				Console.WriteLine("Processing " + file.post.Permalink + "...");
 				var permalinkDirectory = Path.Combine(destinationPath, file.post.Permalink);
 				Directory.CreateDirectory(permalinkDirectory);
 				var fileName = Path.Combine(permalinkDirectory, "index.html");
