@@ -72,5 +72,11 @@
 			StringAssert.StartsWith("<pre class=\"csharp\" style=\"font-family:monospace;\"><span style=\"color: #FF0000;\">class</span>", postContent[3]);
 			StringAssert.EndsWith("</div></div>", postContent.Last());
 		}
+
+		[Test]
+		public void Processes_index_page() {
+			var postContent = File.ReadAllLines("../../TestSite/_site/index.html");
+			postContent.ShouldEqual(new[] { "Hello bar" });
+		}
 	}
 }

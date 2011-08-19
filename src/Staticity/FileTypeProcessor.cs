@@ -16,7 +16,7 @@
 			engine.Initialize();
 		}
 
-		public void WritePost(Post post, string fileName, string basePath, string postsPath) {
+		public void WritePost(Post post, string fileName) {
 			var content = post.GetContent();
 			string output = RecursiveApplyTemplate(content, new Dictionary<string, object> {
 			                                                                               	{ "date", post.Date }

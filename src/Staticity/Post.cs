@@ -12,6 +12,7 @@
 		public string RawName { get; set; }
 		public string Extension { get; set; }
 		public string Permalink { get; set; }
+		public bool IsIndex { get; set; }
 		
 
 		public static Post GetFromFile(FileInfo file) {
@@ -33,6 +34,17 @@
 					RawName = postName,
 					_file = file
 				};
+			}
+				// Special case homepage.
+			if(file.Name.Equals("index.html", StringComparison.OrdinalIgnoreCase)) {
+				return new Post {
+				                	IsIndex = true,
+									Date = DateTime.Now,
+									Extension = file.Extension,
+									Permalink = string.Empty,
+									RawName = "Index",
+									_file = file
+				                };
 			}
 			else {
 				return null;

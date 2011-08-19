@@ -48,11 +48,21 @@
 
 			foreach(var file in files) {
 				Console.WriteLine("Processing " + file.post.Permalink + "...");
+			
 				var permalinkDirectory = Path.Combine(destinationPath, file.post.Permalink);
 				Directory.CreateDirectory(permalinkDirectory);
 				var fileName = Path.Combine(permalinkDirectory, "index.html");
 
-				file.processor.WritePost(file.post, fileName, basePath, postsPath);
+				file.processor.WritePost(file.post, fileName);
+			
+			}
+
+			var index = Path.Combine(basePath, "index.html");
+			if(File.Exists(index)) {
+				Console.WriteLine("Processing index.html...");
+				var indexPage = Post.GetFromFile(new FileInfo(index));
+				var outputPath = Path.Combine(destinationPath, "index.html");
+				_fileTypes[".html"].WritePost(indexPage, outputPath);
 			}
 		}
 	}
