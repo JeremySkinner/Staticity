@@ -1,0 +1,2184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PhpNetXmlDom</name>
+    </assembly>
+    <members>
+        <member name="T:PHP.Library.Xml.DOMDocument">
+            <summary>
+            DOM document.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMNode">
+            <summary>
+            DOM node.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.CheckedChildOperation(PHP.Library.Xml.DOMNode,PHP.Library.Xml.DOMNode,PHP.Library.Xml.DOMNode.NodeAction)">
+            <summary>
+            Performs a child-adding action with error checks.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.insertBefore(PHP.Library.Xml.DOMNode,PHP.Library.Xml.DOMNode)">
+            <summary>
+            Adds a new child before a reference node.
+            </summary>
+            <param name="newNode">The new node.</param>
+            <param name="refNode">The reference node. If not supplied, <paramref name="newNode"/> is appended
+            to the children.</param>
+            <returns>The inserted node.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.replaceChild(PHP.Library.Xml.DOMNode,PHP.Library.Xml.DOMNode)">
+            <summary>
+            Replaces a child node.
+            </summary>
+            <param name="newNode">The new node.</param>
+            <param name="oldNode">The old node.</param>
+            <returns>The inserted node.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.appendChild(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Adds a new child at the end of the children.
+            </summary>
+            <param name="newNode">The node to add.</param>
+            <returns>The node added.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.removeChild(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Removes a child from the list of children.
+            </summary>
+            <param name="oldNode">The node to remove.</param>
+            <returns>The removed node.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.hasChildNodes">
+            <summary>
+            Checks if the node has children.
+            </summary>
+            <returns><B>True</B> if this node has children, <B>false</B> otherwise.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.hasAttributes">
+            <summary>
+            Checks if the node has attributes.
+            </summary>
+            <returns><B>True</B> if this node has attributes, <B>false</B> otherwise.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.lookupPrefix(System.String)">
+            <summary>
+            Gets the namespace prefix of the node based on the namespace URI.
+            </summary>
+            <param name="namespaceUri">The namespace URI.</param>
+            <returns>The prefix of the namespace or <B>null</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.lookupNamespaceUri(System.String)">
+            <summary>
+            Gets the namespace URI of the node based on the prefix.
+            </summary>
+            <param name="prefix">The prefix.</param>
+            <returns>The namespace URI or <B>null</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.isDefaultNamespace(System.String)">
+            <summary>
+            Determines whether the given URI is the default namespace.
+            </summary>
+            <param name="namespaceUri">The namespace URI.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.normalize">
+            <summary>
+            Normalizes the node.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.cloneNode(System.Boolean)">
+            <summary>
+            Creates a copy of the node.
+            </summary>
+            <param name="deep">Indicates whether to copy all descendant nodes. This parameter is
+            defaulted to <B>false</B>.</param>
+            <returns>The cloned node.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.isSameNode(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Indicates if two nodes are the same node.
+            </summary>
+            <param name="anotherNode">The other node.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.isSupported(System.String,System.String)">
+            <summary>
+            Checks if a feature is supported for the specified version.
+            </summary>
+            <param name="feature">The feature to test.</param>
+            <param name="version">The version number of the <paramref name="feature"/> to test.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.getFeature(System.String,System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.getUserData(System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.setUserData(System.String,System.Object,PHP.Library.Xml.DOMUserDataHandler)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.compareDocumentPosition(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNode.isEqualNode(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.nodeName">
+            <summary>
+            Returns the name of the node (exact meaning depends on the particular subtype).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.nodeValue">
+            <summary>
+            Returns or sets the value of the node (exact meaning depends on the particular subtype).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.nodeType">
+            <summary>
+            Returns the type of the node (to be overriden).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.parentNode">
+            <summary>
+            Returns the parent of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.childNodes">
+            <summary>
+            Returns all children of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.firstChild">
+            <summary>
+            Returns the first child of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.lastChild">
+            <summary>
+            Returns the last child of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.previousSibling">
+            <summary>
+            Returns the previous sibling of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.nextSibling">
+            <summary>
+            Returns the next sibling of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.attributes">
+            <summary>
+            Returns a map of attributes of this node (overriden in <see cref="T:PHP.Library.Xml.DOMElement"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.ownerDocument">
+            <summary>
+            This function returns the document the current node belongs to.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.namespaceURI">
+            <summary>
+            Returns the namespace URI of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.prefix">
+            <summary>
+            Returns or sets the namespace prefix of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.localName">
+            <summary>
+            Returns the local name of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.baseURI">
+            <summary>
+            Returns the base URI of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNode.textContent">
+            <summary>
+            Returns or sets the text content of the node.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createElement(System.String,System.String)">
+            <summary>
+            Creates an element with the specified name and inner text.
+            </summary>
+            <param name="tagName">The qualified name of the element.</param>
+            <param name="value">The inner text (value) of the element.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMElement"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createDocumentFragment">
+            <summary>
+            Creates a new document fragment.
+            </summary>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMDocumentFragment"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createTextNode(System.String)">
+            <summary>
+            Creates a new text node with the specified text.
+            </summary>
+            <param name="data">The text for the text node.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMText"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createComment(System.String)">
+            <summary>
+            Creates a comment node containing the specified data.
+            </summary>
+            <param name="data">The comment data.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMComment"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createCDATASection(System.String)">
+            <summary>
+            Creates a CDATA section containing the specified data.
+            </summary>
+            <param name="data">The content of the new CDATA section.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMCdataSection"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createProcessingInstruction(System.String,System.String)">
+            <summary>
+            Creates a processing instruction with the specified name and data.
+            </summary>
+            <param name="target">The name of the processing instruction.</param>
+            <param name="data">The data for the processing instruction.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMProcessingInstruction"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createAttribute(System.String)">
+            <summary>
+            Creates an attribute with the specified name.
+            </summary>
+            <param name="name">The qualified name of the attribute.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMAttr"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createEntityReference(System.String)">
+            <summary>
+            Creates an entity reference with the specified name.
+            </summary>
+            <param name="name">The name of the entity reference.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMEntityReference"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createElementNS(System.String,System.String,System.String)">
+            <summary>
+            Creates an element with the specified namespace URI and qualified name.
+            </summary>
+            <param name="namespaceUri">The namespace URI of the element.</param>
+            <param name="qualifiedName">The qualified name of the element.</param>
+            <param name="value">The inner text (value) of the element.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMElement"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.createAttributeNS(System.String,System.String)">
+            <summary>
+            Creates an attribute with the specified namespace URI and qualified name.
+            </summary>
+            <param name="namespaceUri">The namespace URI of the attribute.</param>
+            <param name="qualifiedName">The qualified name of the attribute.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMAttr"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.getElementsByTagName(System.String)">
+            <summary>
+            Gets all descendant elements with the matching tag name.
+            </summary>
+            <param name="name">The tag name. Use <B>*</B> to return all elements within the element tree.</param>
+            <returns>A <see cref="T:PHP.Library.Xml.DOMNodeList"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.getElementsByTagNameNS(System.String,System.String)">
+            <summary>
+            Gets all descendant elements with the matching namespace URI and local name.
+            </summary>
+            <param name="namespaceUri">The namespace URI.</param>
+            <param name="localName">The local name. Use <B>*</B> to return all elements within the element tree.</param>
+            <returns>A <see cref="T:PHP.Library.Xml.DOMNodeList"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.getElementById(System.String)">
+            <summary>
+            Not yet implemented.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.importNode(PHP.Library.Xml.DOMNode,System.Boolean)">
+            <summary>
+            Imports a node from another document to the current document.
+            </summary>
+            <param name="importedNode">The node being imported.</param>
+            <param name="deep"><B>True</B> to perform deep clone; otheriwse <B>false</B>.</param>
+            <returns>The imported <see cref="T:PHP.Library.Xml.DOMNode"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.adoptNode(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.normalizeDocument">
+            <summary>
+            Puts the entire XML document into a &quot;normal&quot; form.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.renameNode(PHP.Library.Xml.DOMNode,System.String,System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.load(PHP.Library.Xml.DOMDocument,System.String,System.Int32)">
+            <summary>
+            Loads the XML document from the specified URL.
+            </summary>
+            <param name="instance">The <see cref="T:PHP.Library.Xml.DOMDocument"/> instance or <B>null</B>.</param>
+            <param name="fileName">URL for the file containing the XML document to load.</param>
+            <param name="options">Undocumented.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMDocument"/> or <B>false</B> if <paramref name="instance"/>p
+            is <B>null</B>, <B>true</B> or <B>false</B> otherwise.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.loadXML(PHP.Library.Xml.DOMDocument,System.String,System.Int32)">
+            <summary>
+            Loads the XML document from the specified string.
+            </summary>
+            <param name="instance">The <see cref="T:PHP.Library.Xml.DOMDocument"/> instance or <B>null</B>.</param>
+            <param name="xmlString">The XML string.</param>
+            <param name="options">Undocumented.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.DOMDocument"/> or <B>false</B> if <paramref name="instance"/>p
+            is <B>null</B>, <B>true</B> or <B>false</B> otherwise.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.save(System.String,System.Int32)">
+            <summary>
+            Saves the XML document to the specified stream.
+            </summary>
+            <param name="fileName">The location of the file where the document should be saved.</param>
+            <param name="options">Unsupported.</param>
+            <returns>The number of bytes written or <B>false</B> on error.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.saveXML(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Returns the string representation of this document.
+            </summary>
+            <param name="node">The node to dump (the entire document if <B>null</B>).</param>
+            <returns>The string representation of the document / the specified node or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.loadHTML(System.String)">
+            <summary>
+            Not implemented (TODO: need an HTML parser for this).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.loadHTMLFile(System.String)">
+            <summary>
+            Not implemented (TODO: need an HTML parser for this).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.saveHTML">
+            <summary>
+            Not implemented (TODO: need an HTML parser for this).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.saveHTMLFile(System.String)">
+            <summary>
+            Not implemented (TODO: need an HTML parser for this).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.xinclude(System.Int32)">
+            <summary>
+            Not implemented (TODO: need a XInclude implementation for this).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.validate">
+            <summary>
+            Not implemented (System.Xml does not support post-load DTD validation).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.schemaValidate(System.String)">
+            <summary>
+            Validates the document against the specified XML schema.
+            </summary>
+            <param name="schemaFile">URL for the file containing the XML schema to load.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.schemaValidateSource(System.String)">
+            <summary>
+            Validates the document against the specified XML schema.
+            </summary>
+            <param name="schemaString">The XML schema string.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.relaxNGValidate(System.String)">
+            <summary>
+            Not implemented (TODO: will need a Relax NG validator for this).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocument.relaxNGValidateSource(System.String)">
+            <summary>
+            Not implemented (TODO: will need a Relax NG validator for this).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.nodeName">
+            <summary>
+            Returns &quot;#document&quot;.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.nodeValue">
+            <summary>
+            Returns <B>null</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.Document"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.doctype">
+            <summary>
+            Returns the node containing the DOCTYPE declaration.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.implementation">
+            <summary>
+            Returns the DOM implementation.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.documentElement">
+            <summary>
+            Returns the root element of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.actualEncoding">
+            <summary>
+            Returns the encoding of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.xmlEncoding">
+            <summary>
+            Returns the encoding of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.encoding">
+            <summary>
+            Returns or set the encoding of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.xmlStandalone">
+            <summary>
+            Returns or sets the standalone flag of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.standalone">
+            <summary>
+            Returns or sets the standalone flag of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.xmlVersion">
+            <summary>
+            Returns or sets the XML version of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.version">
+            <summary>
+            Returns or sets the XML version of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.strictErrorChecking">
+            <summary>
+            Returns <B>true</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.documentURI">
+            <summary>
+            Returns the base URI of this document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.config">
+            <summary>
+            Returns <B>null</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.formatOutput">
+            <summary>
+            Returns or sets whether XML is formatted by <see cref="M:PHP.Library.Xml.DOMDocument.save(System.String,System.Int32)"/> and <see cref="M:PHP.Library.Xml.DOMDocument.saveXML(PHP.Library.Xml.DOMNode)"/>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.validateOnParse">
+            <summary>
+            Returns of sets whether XML is validated against schema by <see cref="M:PHP.Library.Xml.DOMDocument.load(PHP.Library.Xml.DOMDocument,System.String,System.Int32)"/> and
+            <see cref="M:PHP.Library.Xml.DOMDocument.loadXML(PHP.Library.Xml.DOMDocument,System.String,System.Int32)"/>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.resolveExternals">
+            <summary>
+            Returns <B>false</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.preserveWhiteSpace">
+            <summary>
+            Returns or sets whether whitespace should be preserved by this XML document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.recover">
+            <summary>
+            Returns <B>false</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocument.substituteEntities">
+            <summary>
+            Returns <B>false</B>.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMDocumentFragment">
+            <summary>
+            DOM document fragment.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMDocumentFragment.appendXML(System.String)">
+            <summary>
+            Appends (well-formed) XML data to this document fragment.
+            </summary>
+            <param name="data">The data to append.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentFragment.nodeName">
+            <summary>
+            Returns &quot;#document-fragment&quot;.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentFragment.nodeValue">
+            <summary>
+            Returns <B>null</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentFragment.namespaceURI">
+            <summary>
+            Returns the namespace URI of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentFragment.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.DocumentFragment"/>).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.XSLTProcessor">
+            <summary>
+            Implements the XSLT processor.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.#cctor">
+            <summary>
+            Determines whether Mvp.Xml is available and reflects the MvpXslTransform type.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.importStylesheet(PHP.Library.Xml.DOMDocument)">
+            <summary>
+            Import a stylesheet.
+            </summary>
+            <param name="doc">The imported style sheet passed as a <see cref="T:PHP.Library.Xml.DOMDocument"/> object.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.transformToDoc(PHP.Library.Xml.IXmlDomNode)">
+            <summary>
+            Transforms the source node to a <see cref="T:PHP.Library.Xml.DOMDocument"/> applying the stylesheet given by the
+            <see cref="M:PHP.Library.Xml.XSLTProcessor.importStylesheet(PHP.Library.Xml.DOMDocument)"/> method.
+            </summary>
+            <param name="node">The node to be transformed.</param>
+            <returns>The resulting <see cref="T:PHP.Library.Xml.DOMDocument"/> or <B>false</B> on error.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.transformToUri(PHP.Library.Xml.DOMDocument,System.String)">
+            <summary>
+            Transforms the source node to an URI applying the stylesheet given by the
+            <see cref="M:PHP.Library.Xml.XSLTProcessor.importStylesheet(PHP.Library.Xml.DOMDocument)"/> method.
+            </summary>
+            <param name="doc">The document to transform.</param>
+            <param name="uri">The destination URI.</param>
+            <returns>Returns the number of bytes written or <B>false</B> if an error occurred.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.transformToXml(PHP.Library.Xml.DOMDocument)">
+            <summary>
+            Transforms the source node to a string applying the stylesheet given by the
+            <see cref="M:PHP.Library.Xml.XSLTProcessor.importStylesheet(PHP.Library.Xml.DOMDocument)"/> method.
+            </summary>
+            <param name="doc">The document to transform.</param>
+            <returns>The result of the transformation as a string or FALSE on error.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.setParameter(System.String,System.Object,System.String)">
+            <summary>
+             Sets value for a parameter.
+            </summary>
+            <param name="ns">The namespace URI of the XSLT parameter.</param>
+            <param name="name">The local name of the XSLT parameter or an array of name =&gt; option pairs.</param>
+            <param name="value">The new value of the XSLT parameter.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.getParameter(System.String,System.String)">
+            <summary>
+            Gets value of a parameter.
+            </summary>
+            <param name="ns">The namespace URI of the XSLT parameter.</param>
+            <param name="name">The local name of the XSLT parameter.</param>
+            <returns>The value of the parameter or NULL if it's not set.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.removeParameter(System.String,System.String)">
+            <summary>
+            Removes a parameter.
+            </summary>
+            <param name="ns">The namespace URI of the XSLT parameter.</param>
+            <param name="name">The local name of the XSLT parameter.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.hasExsltSupport">
+            <summary>
+            Determine if this extension has EXSLT support.
+            </summary>
+            <returns><B>False</B>.</returns>
+            <remarks>
+            A EXSLT implementation for the .NET XSL can be found here
+            <A href="http://mvp-xml.sourceforge.net/exslt/">http://mvp-xml.sourceforge.net/exslt/</A>.</remarks>
+        </member>
+        <member name="M:PHP.Library.Xml.XSLTProcessor.registerPHPFunctions(System.Object)">
+            <summary>
+            Enables the ability to use PHP functions as XSLT functions.
+            </summary>
+            <param name="restrict">A string or array denoting function(s) to be made callable.</param>
+        </member>
+        <member name="T:PHP.Library.Xml.SimpleXMLElement">
+            <summary>
+            The one and only class comprising the SimpleXML extension.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.className">
+            <summary>
+            Name of a class, which will be used when initializing children. Class which extends SimpleXmlElement HAS to be used. 
+            Non-null value means, that this instance of<see cref="T:PHP.Library.Xml.SimpleXMLElement"/> was initialized with specified className.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement._element">
+            <summary>
+            Non-<B>null</B> except for construction (between ctor and <see cref="M:PHP.Library.Xml.SimpleXMLElement.__construct(System.String,System.Int32,System.Boolean)"/>
+            or <see cref="P:PHP.Library.Xml.SimpleXMLElement.XmlElement"/> setter invocation).
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement._namespaceManager">
+            <summary>
+            Lazily created namespace manager used for XPath queries.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.XmlAttribute">
+            <summary>
+            The attribute (if this instance represents an individual attribute).
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.iterationType">
+            <summary>
+            Specifies iteration behavior of this instance (what it actually represents).
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.iterationNamespace">
+            <summary>
+            The prefix or namespace URI of the elements/attributes that should be iterated and dumped.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.intermediateElements">
+            <summary>
+            A list of names of elements representing the path in the document that should be added
+            when a field or item is written to this instance.
+            </summary>
+            <remarks>
+            This field supports <c>$doc->elem1->elem2->elem3 = "value"</c>, which creates <c>elem1</c>,
+            <c>elem2</c>, and <c>elem3</c> if they do not already exist. Becomes non-<B>null</B> when
+            an unknown element is read.
+            </remarks>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.Create(System.String)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.
+            </summary>
+            <param name="className">The name of the class to create or <B>null</B>.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.Create(System.String,System.Xml.XmlElement,PHP.Library.Xml.SimpleXMLElement.IterationType,PHP.Library.Xml.SimpleXMLElement.IterationNamespace)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.
+            </summary>
+            <param name="className">The name of the class to create or <B>null</B>.</param>
+            <param name="xmlElement">The <see cref="P:PHP.Library.Xml.SimpleXMLElement.XmlElement"/> to wrap.</param>
+            <param name="iterationType">Iteration behavior of new instance.</param>
+            <param name="iterationNamespace">The namespace URI of the elements/attributes that should be iterated and dumped.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.Create(System.String,System.Xml.XmlElement,PHP.Library.Xml.SimpleXMLElement.IterationType)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.
+            </summary>
+            <param name="className">The name of the class to create or <B>null</B>.</param>
+            <param name="xmlElement">The <see cref="P:PHP.Library.Xml.SimpleXMLElement.XmlElement"/> to wrap.</param>
+            <param name="iterationType">Iteration behavior of new instance.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.Create(System.String,System.Xml.XmlElement)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.
+            </summary>
+            <param name="xmlElement">The <see cref="P:PHP.Library.Xml.SimpleXMLElement.XmlElement"/> to wrap.</param>
+            <param name="className">The name of the class to create or <B>null</B>.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.Create(System.String,System.Xml.XmlAttribute,PHP.Library.Xml.SimpleXMLElement.IterationNamespace)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.
+            </summary>
+            <param name="className">The name of the class to create or <B>null</B>.</param>
+            <param name="xmlAttribute">The <see cref="P:PHP.Library.Xml.SimpleXMLElement.XmlElement"/> to wrap.</param>
+            <param name="iterationNamespace">The namespace URI of the elements/attributes that should be iterated and dumped.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.Create(System.String,System.Xml.XmlAttribute)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.
+            </summary>
+            <param name="className">The name of the class to create or <B>null</B>.</param>
+            <param name="xmlAttribute">The <see cref="P:PHP.Library.Xml.SimpleXMLElement.XmlElement"/> to wrap.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or a derived class.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.ToPhpBytes(PHP.Core.Reflection.DTypeDesc)">
+            <summary>
+            Internal to-<see cref="T:PHP.Core.PhpBytes"/> conversion.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.ToString(PHP.Core.Reflection.DTypeDesc,System.Boolean,System.Boolean@)">
+            <summary>
+            Internal to-<see cref="T:System.String"/> conversion.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.ToString(PHP.Core.Reflection.DTypeDesc)">
+            <summary>
+            
+            </summary>
+            <param name="caller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.ToBoolean">
+            <summary>
+            Internal to-<see cref="T:System.Boolean"/> conversion.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.PropertyIterator">
+            <summary>
+            Internal dump enumeration.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.CloneObjectInternal(PHP.Core.Reflection.DTypeDesc,PHP.Core.ScriptContext,System.Boolean)">
+            <summary>
+            Invoked when the instance is being cloned.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.PropertyReadHandler(System.String,PHP.Core.Reflection.DTypeDesc,System.Boolean@)">
+            <summary>
+            Property reading (i.e. child element getter).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.PropertyWriteHandler(System.Object,System.Object,PHP.Core.Reflection.DTypeDesc)">
+            <summary>
+            Property writing (i.e. child element setter).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.PropertyUnsetHandler(System.String,PHP.Core.Reflection.DTypeDesc)">
+            <summary>
+            Property unsetting (i.e. child element remover).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.PropertyIssetHandler(System.String,PHP.Core.Reflection.DTypeDesc,System.Boolean@)">
+            <summary>
+            Property isset testing (i.e. child element existence test).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.GetPhpInnerText(System.Xml.XmlNode)">
+            <summary>
+            Get inner text, child elements only (not recursive).
+            </summary>
+            <param name="child"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.GetPhpChildElement(System.Xml.XmlNode)">
+            <summary>
+            Returns given child node as a SimpleXMLElement, or as a simple string.
+            It depends on its child nodes. (Because of PHP; node is represented as a string, if it has a child node of type Text)
+            </summary>
+            <param name="child"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.ToPhpArray">
+            <summary>
+            Overrides conversion of SimpleXMLElement to array.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.asXML(System.String)">
+            <summary>
+            Return a well-formed XML string based on this <see cref="T:PHP.Library.Xml.SimpleXMLElement"/>.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.xpath(System.String)">
+            <summary>
+            Runs an XPath query on the XML data.
+            </summary>
+            <param name="path">The XPath query string.</param>
+            <returns>A <see cref="T:PHP.Core.PhpArray"/> of <see cref="T:PHP.Library.Xml.SimpleXMLElement"/>s or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.registerXPathNamespace(System.String,System.String)">
+            <summary>
+            Creates a prefix/ns context for the next XPath query.
+            </summary>
+            <param name="prefix">The namespace prefix.</param>
+            <param name="namespaceUri">The namespace URI.</param>
+            <returns><B>True</B> on success, <B>false</B> on error.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.attributes(System.String,System.Boolean)">
+            <summary>
+            Identifies the element's attributes.
+            </summary>
+            <param name="ns">Namespace URI or prefix of the attributes to identify.</param>
+            <param name="isPrefix">If <B>true</B> <paramref name="ns"/> denotes a prefix, if <B>false</B> it
+            is a namespace URI.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> wrapping the same element but enumerating and
+            dumping only the matching attributes.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.children(System.String,System.Boolean)">
+            <summary>
+            Identifies the element's child elements.
+            </summary>
+            <param name="ns">Namespace URI or prefix of the elements to identify.</param>
+            <param name="isPrefix">If <B>true</B> <paramref name="ns"/> denotes a prefix, if <B>false</B> it
+            is a namespace URI.</param>
+            <returns>A new <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> wrapping the same element but enumerating and
+            dumping only the matching elements.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.getNamespaces(System.Boolean)">
+            <summary>
+            Returns namespaces used by children of this node.
+            </summary>
+            <param name="recursive">If <B>true</B> returns namespaces used by all children recursively.</param>
+            <returns>An <see cref="T:PHP.Core.PhpArray"/> keyed by prefix with values being namespace URIs.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.getDocNamespaces(System.Boolean)">
+            <summary>
+            Returns namespaces used by the document.
+            </summary>
+            <param name="recursive">If <B>true</B> returns namespaces used by all nodes recursively.</param>
+            <returns>An <see cref="T:PHP.Core.PhpArray"/> keyed by prefix with values being namespace URIs.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.getName">
+            <summary>
+            Gets the name of the XML element.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.addChild(System.String,System.String,System.String)">
+            <summary>
+            Adds a child element to this XML element.
+            </summary>
+            <param name="qualifiedName">The qualified name of the element to add.</param>
+            <param name="value">The optional element value.</param>
+            <param name="namespaceUri">The optional element namespace URI.</param>
+            <returns>The <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> of the child.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.addAttribute(System.String,System.String,System.String)">
+            <summary>
+            Adds an attribute to this XML element.
+            </summary>
+            <param name="qualifiedName">The qualified name of the attribute to add.</param>
+            <param name="value">The attribute value.</param>
+            <param name="namespaceUri">The optional attribute namespace URI.</param>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.GetChildElementValue(System.String,System.Xml.XmlElement)">
+            <summary>
+            Wraps a node or returns its inner text if it is an element containing nothing but text.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.GetNodeText(System.Xml.XmlNode)">
+            <summary>
+            Returns the text data if the supplied node is treated as &quot;text&quot;.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.GetNodeNamespaces(System.Xml.XmlNode,System.Boolean)">
+            <summary>
+            Returns an array of namespaces used by children of the given node (recursively).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.GetSiblingForIndex(System.Int32)">
+            <summary>
+            Returns the <paramref name="index"/>th sibling with the same local name and namespace URI or <B>null</B>.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.GetAttributeForIndex(System.Int32)">
+            <summary>
+            Returns the <param name="index"/>th attribute with the current namespace URI or<B>null</B>.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.BuildUpIntermediateElements">
+            <summary>
+            Creates elements stored in <see cref="F:PHP.Library.Xml.SimpleXMLElement.intermediateElements"/> when it turns out that
+            there will be a write.
+            </summary>
+            <remarks><seealso cref="F:PHP.Library.Xml.SimpleXMLElement.intermediateElements"/></remarks>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.count">
+            <summary>
+            Count childs in the element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PHP.Library.Xml.SimpleXMLElement.IterationType">
+            <summary>
+            Specifies mostly the iteration (<c>foreach</c>) behavior of a <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> instance.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.IterationType.None">
+            <summary>
+            The instance represents a nonexistent element.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.IterationType.Attribute">
+            <summary>
+            The instance represents an attribute.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.IterationType.AttributeList">
+            <summary>
+            The instance represents the attribute list of an element.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.IterationType.Element">
+            <summary>
+            The instance represents an element and iteration will include its siblings.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.SimpleXMLElement.IterationType.ChildElements">
+            <summary>
+            The instance represents an element and iteration will include its child elements.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.IterationNamespace.CreateWithPrefix(System.String,System.Xml.XmlNode)">
+            <summary>
+            Create namespace iteration type by prefix.
+            </summary>
+            <param name="prefix"></param>
+            <param name="relatedNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.IterationNamespace.CreateWithPrefix(System.Xml.XmlNode)">
+            <summary>
+            Create namespace iteration type by prefix.
+            </summary>
+            <param name="relatedNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.IterationNamespace.CreateWithNamespace(System.String)">
+            <summary>
+            Create namespace iteration type by full namespace URI. Attributes with default namespace (with empty prefix) will not be included.
+            </summary>
+            <param name="namespaceUri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.IterationNamespace.IsIn(System.Xml.XmlNode)">
+            <summary>
+            Determine if the given XML node has the namespace.
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXMLElement.IterationNamespace.GetFirstChildIn(System.Xml.XmlNode,System.String)">
+            <summary>
+            Get the node[prefix:name] or node[name, ns] according to the namespace iteration type.
+            </summary>
+            <param name="node"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PHP.Library.Xml.SimpleXMLElement.IterationNamespace.namespacePrefix">
+            <summary>
+            The namespace prefix. If it is not null, the prefix is used.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.SimpleXMLElement.IterationNamespace.namespaceUri">
+            <summary>
+            The namespace of included elements/attributes. (Namespace of prefix if prefix is used)
+            This value is always not null valid namespace (or empty string).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMElement">
+            <summary>
+            DOM element.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.getAttribute(System.String)">
+            <summary>
+            Returns the value of an attribute.
+            </summary>
+            <param name="name">The attribute name.</param>
+            <returns>The attribute value or empty string.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.getAttributeNS(System.String,System.String)">
+            <summary>
+            Returns the value of an attribute.
+            </summary>
+            <param name="namespaceUri">The attribute namespace URI.</param>
+            <param name="localName">The attribute local name.</param>
+            <returns>The attribute value or empty string.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.setAttribute(System.String,System.String)">
+            <summary>
+            Sets the value of a attribute (creates new one if it does not exist).
+            </summary>
+            <param name="name">The attribute name.</param>
+            <param name="value">The attribute value.</param>
+            <returns><B>True</B> on success, <B>false</B> on failure.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.setAttributeNS(System.String,System.String,System.String)">
+            <summary>
+            Sets the value of a attribute (creates new one if it does not exist).
+            </summary>
+            <param name="namespaceUri">The attribute namespace URI.</param>
+            <param name="qualifiedName">The attribute qualified name.</param>
+            <param name="value">The attribute value.</param>
+            <returns><B>True</B> on success, <B>false</B> on failure.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.removeAttribute(System.String)">
+            <summary>
+            Removes an attribute.
+            </summary>
+            <param name="name">The attribute name.</param>
+            <returns><B>True</B> on success, <B>false</B> on failure.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.removeAttributeNS(System.String,System.String)">
+            <summary>
+            Removes an attribute.
+            </summary>
+            <param name="namespaceUri">The attribute namespace URI.</param>
+            <param name="localName">The attribute local name.</param>
+            <returns><B>True</B> on success, <B>false</B> on failure.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.getAttributeNode(System.String)">
+            <summary>
+            Returns an attribute node.
+            </summary>
+            <param name="name">The attribute name.</param>
+            <returns>The attribute or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.getAttributeNodeNS(System.String,System.String)">
+            <summary>
+            Returns an attribute node.
+            </summary>
+            <param name="namespaceUri">The attribute namespace URI.</param>
+            <param name="localName">The attribute local name.</param>
+            <returns>The attribute or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.setAttributeNode(PHP.Library.Xml.DOMAttr)">
+            <summary>
+            Adds new attribute node to the element.
+            </summary>
+            <param name="attribute">The attribute node.</param>
+            <returns>Old node if the attribute has been replaced or <B>null</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.setAttributeNodeNS(PHP.Library.Xml.DOMAttr)">
+            <summary>
+            Adds new attribute node to the element.
+            </summary>
+            <param name="attribute">The attribute node.</param>
+            <returns>Old node if the attribute has been replaced or <B>null</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.removeAttributeNode(PHP.Library.Xml.DOMAttr)">
+            <summary>
+            Removes an attribute node from the element.
+            </summary>
+            <param name="attribute">The attribute node.</param>
+            <returns>Old node if the attribute has been removed or <B>null</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.hasAttribute(System.String)">
+            <summary>
+            Checks whether an attribute exists.
+            </summary>
+            <param name="name">The attribute name.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.hasAttributeNS(System.String,System.String)">
+            <summary>
+            Checks whether an attribute exists.
+            </summary>
+            <param name="namespaceUri">The attribute namespace URI.</param>
+            <param name="localName">The attribute local name.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.getElementsByTagName(System.String)">
+            <summary>
+            Gets all descendant elements with the matching tag name.
+            </summary>
+            <param name="name">The tag name. Use <B>*</B> to return all elements within the element tree.</param>
+            <returns>A <see cref="T:PHP.Library.Xml.DOMNodeList"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.getElementsByTagNameNS(System.String,System.String)">
+            <summary>
+            Gets all descendant elements with the matching namespace URI and local name.
+            </summary>
+            <param name="namespaceUri">The namespace URI.</param>
+            <param name="localName">The local name. Use <B>*</B> to return all elements within the element tree.</param>
+            <returns>A <see cref="T:PHP.Library.Xml.DOMNodeList"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.setIdAttribute(System.String,System.Boolean)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.setIdAttributeNS(System.String,System.String,System.Boolean)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMElement.setIdAttributeNode(PHP.Library.Xml.DOMAttr,System.Boolean)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMElement.nodeName">
+            <summary>
+            Returns the name of the element.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMElement.nodeValue">
+            <summary>
+            Returns or sets the value (inner text) of the element.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMElement.namespaceURI">
+            <summary>
+            Returns the namespace URI of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMElement.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.Element"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMElement.attributes">
+            <summary>
+            Returns a map of attributes of this node (see <see cref="T:PHP.Library.Xml.DOMNamedNodeMap"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMElement.tagName">
+            <summary>
+            Returns the tag name.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMElement.schemaTypeInfo">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMAttr">
+            <summary>
+            DOM attribute.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMAttr.__construct(System.String,System.String)">
+            <summary>
+            Initializes a new <see cref="T:PHP.Library.Xml.DOMAttr"/> object.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMAttr.isId">
+            <summary>
+            Checks if attribute is a defined ID.
+            </summary>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.nodeName">
+            <summary>
+            Returns the name of the attribute.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.nodeValue">
+            <summary>
+            Returns or sets the value of the attribute.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.namespaceURI">
+            <summary>
+            Returns the namespace URI of the attribute.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.Attribute"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.name">
+            <summary>
+            Returns the name of the attribute.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.value">
+            <summary>
+            Returns or sets the value of this attribute
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.specified">
+            <summary>
+            Always returns <B>true</B> as in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.ownerElement">
+            <summary>
+            Returns the <see cref="T:PHP.Library.Xml.DOMElement"/> to which this attribute belongs.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMAttr.schemaTypeInfo">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.NodeType">
+            <summary>
+            Enumerates possible DOM node types.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.AttributeType">
+            <summary>
+            Enumerates who-knows-what. (TODO)
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.XmlDom">
+            <summary>
+            Implements constants and functions.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XmlDom.ImportSimpleXml(PHP.Core.Reflection.DObject)">
+            <summary>
+            Converts a <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> object to a <see cref="T:PHP.Library.Xml.DOMElement"/>.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMDocumentType">
+            <summary>
+            DOM document type.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentType.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.DocumentType"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentType.name">
+            <summary>
+            Returns the name of this document type.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentType.entities">
+            <summary>
+            Returns a map of the entities declared by this document type.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentType.notations">
+            <summary>
+            Returns a map of the entities declared by this document type.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentType.publicId">
+            <summary>
+            Returns the value of the public identifier of this document type.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentType.systemId">
+            <summary>
+            Gets the value of the system identifier on this document type.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMDocumentType.internalSubset">
+            <summary>
+            Gets the value of the DTD internal subset on this document type.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMNotation">
+            <summary>
+            DOM notation.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNotation.publicId">
+            <summary>
+            Returns the value of the public identifier on the notation declaration.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNotation.systemId">
+            <summary>
+            Returns the value of the system identifier on the notation declaration.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNotation.nodeName">
+            <summary>
+            Returns the name of the notation node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNotation.nodeValue">
+            <summary>
+            Returns or sets the value of the notation node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNotation.attributes">
+            <summary>
+            Returns the attributes of this notation node.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMProcessingInstruction">
+            <summary>
+            DOM processing instruction.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMProcessingInstruction.nodeName">
+            <summary>
+            Returns the name of the processing instruction.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMProcessingInstruction.nodeValue">
+            <summary>
+            Returns or sets the value of the processing instruction.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMProcessingInstruction.namespaceURI">
+            <summary>
+            Returns the namespace URI of the processing instruction.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMProcessingInstruction.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.ProcessingInstruction"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMProcessingInstruction.target">
+            <summary>
+            Returns the target (name) of the processing instruction.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMProcessingInstruction.data">
+            <summary>
+            Returns or sets the data (value) of the processing instruction.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMNameSpaceNode">
+            <summary>
+            DOM namespace node (unsupported).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMXPath">
+            <summary>
+            DOM XPath implementation.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMXPath.registerNamespace(System.String,System.String)">
+            <summary>
+            Registeres the given namespace with the collection of known namespaces.
+            </summary>
+            <param name="prefix">The prefix to associate with the namespace being registered.</param>
+            <param name="uri">The namespace to register.</param>
+            <returns><B>True</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMXPath.query(System.String,PHP.Library.Xml.DOMNode)">
+            <summary>
+            Evaluates the given XPath expression.
+            </summary>
+            <param name="expr">The expression to evaluate.</param>
+            <param name="context">The context node for doing relative XPath queries. By default, the queries are
+            relative to the root element.</param>
+            <returns>The <see cref="T:PHP.Library.Xml.DOMNodeList"/> containg the result or <B>false</B> on error.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMXPath.evaluate(System.String,PHP.Library.Xml.DOMNode)">
+            <summary>
+            Evaluates the given XPath expression and returns a typed result if possible.
+            </summary>
+            <param name="expr">The expression to evaluate.</param>
+            <param name="context">The context node for doing relative XPath queries. By default, the queries are
+            relative to the root element.</param>
+            <returns>A typed result if possible or a <see cref="T:PHP.Library.Xml.DOMNodeList"/> containing all nodes matching the
+            given <paramref name="expr"/>.</returns>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMXPath.document">
+            <summary>
+            Returns the <see cref="T:PHP.Library.Xml.DOMDocument"/> associated with this object.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMCharacterData">
+            <summary>
+            DOM character data.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMCharacterData.substringData(System.Int32,System.Int32)">
+            <summary>
+            Retrieves a substring of the full string from the specified range.
+            </summary>
+            <param name="offset">The position within the string to start retrieving.</param>
+            <param name="count">The number of characters to retrieve.</param>
+            <returns>The substring corresponding to the specified range or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMCharacterData.appendData(System.String)">
+            <summary>
+            Appends the specified string to the end of the character data of the node.
+            </summary>
+            <param name="arg">The string to insert into the existing string.</param>
+            <returns><B>True</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMCharacterData.insertData(System.Int32,System.String)">
+            <summary>
+            Inserts the specified string at the specified character offset. 
+            </summary>
+            <param name="offset">The position within the string to insert the supplied string data.</param>
+            <param name="arg">The string data that is to be inserted into the existing string.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMCharacterData.deleteData(System.Int32,System.Int32)">
+            <summary>
+            Removes a range of characters from the node.
+            </summary>
+            <param name="offset">The position within the string to start deleting.</param>
+            <param name="count">The number of characters to delete.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMCharacterData.replaceData(System.Int32,System.Int32,System.String)">
+            <summary>
+            Replaces the specified number of characters starting at the specified offset with the specified string.
+            </summary>
+            <param name="offset">The position within the string to start replacing.</param>
+            <param name="count">The number of characters to replace.</param>
+            <param name="arg">The new data that replaces the old string data.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMCharacterData.data">
+            <summary>
+            Returns or sets the data of the node.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMCharacterData.length">
+            <summary>
+            Returns the length of the data in characters.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMText">
+            <summary>
+            DOM text.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMText.splitText(System.Int32)">
+            <summary>
+            Splits the node into two nodes at the specified offset, keeping both in the tree as siblings.
+            </summary>
+            <param name="offset">The offset at which to split the node.</param>
+            <returns>The new node.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMText.isWhitespaceInElementContent">
+            <summary>
+            Determines whether this text node is empty / whitespace only.
+            </summary>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMText.isElementContentWhitespace">
+            <summary>
+            Determines whether this text node is empty / whitespace only.
+            </summary>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMText.replaceWholeText(System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMText.nodeName">
+            <summary>
+            Returns &quot;#text&quot;.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMText.nodeValue">
+            <summary>
+            Returns or sets the text.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMText.namespaceURI">
+            <summary>
+            Returns <B>null</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMText.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.Text"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMText.wholeText">
+            <summary>
+            Gets the concatenated values of the node and all its child nodes.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMCdataSection">
+            <summary>
+            DOM character data section.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMCdataSection.nodeName">
+            <summary>
+            Returns &quot;#cdata-section&quot;.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMCdataSection.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.CharacterDataSection"/>).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMComment">
+            <summary>
+            DOM comment.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMComment.nodeName">
+            <summary>
+            Returns &quot;#comment&quot;.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMComment.nodeValue">
+            <summary>
+            Returns or sets the text.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMComment.namespaceURI">
+            <summary>
+            Returns <B>null</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMComment.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.Comment"/>).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMConfiguration">
+            <summary>
+            DOM configuration (not implemented in PHP 5.1.6).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMUserDataHandler">
+            <summary>
+            DOM user data handler (not implemented in PHP 5.1.6).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMLocator">
+            <summary>
+            DOM locator (not implemented in PHP 5.1.6).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMDomError">
+            <summary>
+            The DOM error (not implemented in PHP 5.1.6).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMErrorHandler">
+            <summary>
+            DOM error handler (not implemented in PHP 5.1.6).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMTypeinfo">
+            <summary>
+            DOM type info (not implemented in PHP 5.1.6).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMEntity">
+            <summary>
+            DOM entity.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntity.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.Entity"/>).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntity.publicId">
+            <summary>
+            Returns the public identifier of this entity.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntity.systemId">
+            <summary>
+            Returns the system identifier of this entity.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntity.notationName">
+            <summary>
+            Returns the name of the optional NDATA attribute.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntity.actualEncoding">
+            <summary>
+            Always returns <B>null</B> as in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntity.encoding">
+            <summary>
+            Always returns <B>null</B> as in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntity.version">
+            <summary>
+            Always returns <B>null</B> as in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMEntityReference">
+            <summary>
+            DOM entity reference.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntityReference.nodeName">
+            <summary>
+            Returns the name of the entity reference.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntityReference.nodeValue">
+            <summary>
+            Returns <B>null</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntityReference.namespaceURI">
+            <summary>
+            Returns <B>null</B>.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMEntityReference.nodeType">
+            <summary>
+            Returns the type of the node (<see cref="F:PHP.Library.Xml.NodeType.EntityReference"/>).
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.SimpleXml">
+            <summary>
+            Contains implementation of SimpleXML functions.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXml.LoadFile(System.String,System.String,System.Int32)">
+            <summary>
+            Loads an XML file into an object.
+            </summary>
+            <param name="fileName">The file name.</param>
+            <param name="className">The name of the class whose instance should be returned (must extend
+            <see cref="T:PHP.Library.Xml.SimpleXMLElement"/>).</param>
+            <param name="options">Additional parameters (unsupported).</param>
+            <returns>An instance of <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or of the class specified by
+            <paramref name="className"/>, or <B>false</B> on error.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXml.LoadString(System.String,System.String,System.Int32)">
+            <summary>
+            Loads a string of XML into an object.
+            </summary>
+            <param name="data">The XML string.</param>
+            <param name="className">The name of the class whose instance should be returned (must extend
+            <see cref="T:PHP.Library.Xml.SimpleXMLElement"/>).</param>
+            <param name="options">Additional parameters (unsupported).</param>
+            <returns>An instance of <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or of the class specified by
+            <paramref name="className"/>, or <B>false</B> on error.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.SimpleXml.ImportDom(PHP.Core.Reflection.DObject,System.String)">
+            <summary>
+            Converts a <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> object to a <see cref="T:PHP.Library.Xml.DOMElement"/>.
+            </summary>
+            <param name="domNode">A <see cref="T:PHP.Library.Xml.DOMNode"/>.</param>
+            <param name="className">The name of the class whose instance should be returned (must extend
+            <see cref="T:PHP.Library.Xml.SimpleXMLElement"/>).</param>
+            <returns>An instance of <see cref="T:PHP.Library.Xml.SimpleXMLElement"/> or of the class specified by
+            <paramref name="className"/>, or <B>false</B> on error.</returns>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMImplementation">
+            <summary>
+            DOM implementation.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMImplementation.getFeature(PHP.Library.Xml.DOMImplementation,System.String,System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMImplementation.hasFeature(PHP.Library.Xml.DOMImplementation,System.String,System.String)">
+            <summary>
+            Tests if this DOM implementation implements a specific feature.
+            </summary>
+            <param name="instance">The <see cref="T:PHP.Library.Xml.DOMImplementation"/> instance or <B>null</B>.</param>
+            <param name="feature">The feature.</param>
+            <param name="version">The feature version.</param>
+            <returns><B>True</B> or <B>false</B>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMImplementation.createDocumentType(PHP.Library.Xml.DOMImplementation,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.DOMDocumentType"/>.
+            </summary>
+            <param name="instance">The <see cref="T:PHP.Library.Xml.DOMImplementation"/> instance or <B>null</B>.</param>
+            <param name="qualifiedName">Name of the document type.</param>
+            <param name="publicId">The public identifier of the document type.</param>
+            <param name="systemId">The system identifier of the document type.</param>
+            <returns>The <see cref="T:PHP.Library.Xml.DOMDocumentType"/>.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMImplementation.createDocument(PHP.Library.Xml.DOMImplementation,System.String,System.String,PHP.Library.Xml.DOMDocumentType)">
+            <summary>
+            Creates a new <see cref="T:PHP.Library.Xml.DOMDocument"/>.
+            </summary>
+            <param name="instance">The <see cref="T:PHP.Library.Xml.DOMImplementation"/> instance or <B>null</B>.</param>
+            <param name="namespaceUri">The namespace URI of the root element to create.</param>
+            <param name="qualifiedName">The qualified name of the document element.</param>
+            <param name="docType">The type of document to be created.</param>
+            <returns>The <see cref="T:PHP.Library.Xml.DOMDocument"/>.</returns>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMImplementationSource">
+            <summary>
+            DOM implementation source.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMImplementationSource.getDomimplementation(System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMImplementationSource.getDomimplementations(System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.CloneType">
+            <summary>
+            Enumerates the clone behavior. (Where is this supposed to be used?)
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.XsltConvertor">
+            <summary>
+            Provides conversion routines between .NET and PHP representation of W3C data types.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XsltConvertor.DotNetToPhp(System.Object)">
+            <summary>
+            Converts a W3C .NET object to the corresponding W3C PHP object.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XsltConvertor.PhpToDotNet(System.Object)">
+            <summary>
+            Converts a W3C PHP object to the corresponding W3C .NET object.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XsltConvertor.PhpToString(System.Object)">
+            <summary>
+            Converts a W3C PHP object to a corresponding string.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.XsltUserFunctionHandler">
+            <summary>
+            Handles PHP function invocations via <code>php:function</code> and <code>php:functionString</code>.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMNodeList">
+            <summary>
+            DOM node list.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNodeList.item(System.Int32)">
+            <summary>
+            Retrieves a node specified by an index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>The node or <B>NULL</B> if the <paramref name="index"/> is invalid.</returns>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNodeList.length">
+            <summary>
+            Returns the number of nodes in the list.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMNamedNodeMap">
+            <summary>
+            DOM named node map.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNamedNodeMap.getNamedItem(System.String)">
+            <summary>
+            Retrieves a node specified by name.
+            </summary>
+            <param name="name">The (local) name of the node to retrieve.</param>
+            <returns>A node with the specified (local) node name or <B>null</B> if no node is found.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNamedNodeMap.setNamedItem(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNamedNodeMap.removeNamedItem(System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNamedNodeMap.item(System.Int32)">
+            <summary>
+            Retrieves a node specified by an index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>The node or <B>null</B> if <paramref name="index"/> is invalid.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNamedNodeMap.getNamedItemNS(System.String,System.String)">
+            <summary>
+            Retrieves a node specified by local name and namespace URI.
+            </summary>
+            <param name="namespaceUri">The namespace URI.</param>
+            <param name="localName">The local name.</param>
+            <returns>A node with the specified local name and namespace URI, or <B>null</B> if no node is found.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNamedNodeMap.setNamedItemNS(PHP.Library.Xml.DOMNode)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMNamedNodeMap.removeNamedItemNS(System.String,System.String)">
+            <summary>
+            Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMNamedNodeMap.length">
+            <summary>
+            Returns the number of nodes in the map.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMStringList">
+            <summary>
+            DOM string list. Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMNameList">
+            <summary>
+            DOM name list. Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMImplementationList">
+            <summary>
+            DOM implementation list. Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMStringExtend">
+            <summary>
+            DOM string extend. Not implemented in PHP 5.1.6.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.ExceptionCode">
+            <summary>
+            Enumerates <see cref="T:PHP.Library.Xml.DOMException"/> codes.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.IndexOutOfBounds">
+            <summary>
+            Index or size is negative, or greater than the allowed value. 
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.StringTooLong">
+            <summary>
+            The specified range of text does not fit into a string.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.BadHierarchy">
+            <summary>
+            A node is inserted somewhere it doesn't belong.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.WrongDocument">
+            <summary>
+            A node is used in a different document than the one that created it.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.InvalidCharacter">
+            <summary>
+            An invalid or illegal character is specified, such as in a name.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.DataNotAllowed">
+            <summary>
+            Data is specified for a node which does not support data.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.DomModificationNotAllowed">
+            <summary>
+            An attempt is made to modify an object where modifications are not allowed.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.NotFound">
+            <summary>
+            An attempt is made to reference a node in a context where it does not exist.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.NotSupported">
+            <summary>
+            The implementation does not support the requested type of object or operation.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.AttributeInUse">
+            <summary>
+            An attempt is made to add an attribute that is already in use elsewhere.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.InvalidState">
+            <summary>
+            An attempt is made to use an object that is not, or is no longer, usable.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.SyntaxError">
+            <summary>
+            An invalid or illegal string is specified.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.ModificationNotAllowed">
+            <summary>
+            An attempt is made to modify the type of the underlying object.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.NamespaceError">
+            <summary>
+            An attempt is made to create or change an object in a way which is incorrect with
+            regard to namespaces.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.InvalidAccess">
+            <summary>
+            A parameter or an operation is not supported by the underlying object.
+            </summary>
+        </member>
+        <member name="F:PHP.Library.Xml.ExceptionCode.ValidationError">
+            <summary>
+            A call to a method such as <B>insertBefore</B> or <B>removeChild</B> would make the
+            node invalid with respect to &quot;partial validity&quot;, this exception would be
+            raised and the operation would not be done. 
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.DOMException">
+            <summary>
+            The exception thrown by the DOM extension.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMException.#ctor(PHP.Core.ScriptContext,System.Boolean)">
+            <summary>
+            Creates a new instance (short constructor).
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMException.Throw(PHP.Library.Xml.ExceptionCode)">
+            <summary>
+            Throws a <see cref="T:PHP.Library.Xml.DOMException"/> user exception with the given code.
+            </summary>
+            <param name="code">The exception code.</param>
+            <exception cref="T:PHP.Core.PhpUserException"/>
+        </member>
+        <member name="M:PHP.Library.Xml.DOMException.Throw(PHP.Library.Xml.ExceptionCode,System.String)">
+            <summary>
+            Throws a <see cref="T:PHP.Library.Xml.DOMException"/> user exception with the given code and message.
+            </summary>
+            <param name="code">The exception code.</param>
+            <param name="message">The exception message.</param>
+            <exception cref="T:PHP.Core.PhpUserException"/>
+        </member>
+        <member name="P:PHP.Library.Xml.DOMException.code">
+            <summary>
+            Returns the exception code.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.DocumentFragmentEmpty">
+            <summary>
+              Looks up a localized string similar to Document fragment is empty.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorAttributeInUse">
+            <summary>
+              Looks up a localized string similar to Inuse Attribute Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorBadHierarchy">
+            <summary>
+              Looks up a localized string similar to Hierarchy Request Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorDataNotAllowed">
+            <summary>
+              Looks up a localized string similar to No Data Allowed Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorDomModificationNotAllowed">
+            <summary>
+              Looks up a localized string similar to No Modification Allowed Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorIndexOutOfBounds">
+            <summary>
+              Looks up a localized string similar to Index Size Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorInvalidAccess">
+            <summary>
+              Looks up a localized string similar to Invalid Access Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorInvalidCharacter">
+            <summary>
+              Looks up a localized string similar to Invalid Character Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorInvalidState">
+            <summary>
+              Looks up a localized string similar to Invalid State Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorModificationNotAllowed">
+            <summary>
+              Looks up a localized string similar to Invalid Modification Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorNamespaceError">
+            <summary>
+              Looks up a localized string similar to Namespace Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorNotFound">
+            <summary>
+              Looks up a localized string similar to Not Found Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorNotSupported">
+            <summary>
+              Looks up a localized string similar to Not Supported Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorStringTooLong">
+            <summary>
+              Looks up a localized string similar to DOM String Size Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorSyntaxError">
+            <summary>
+              Looks up a localized string similar to Syntax Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorValidationError">
+            <summary>
+              Looks up a localized string similar to Validation Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ErrorWrongDocument">
+            <summary>
+              Looks up a localized string similar to Wrong Document Error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.ExsltSupportMissing">
+            <summary>
+              Looks up a localized string similar to EXSLT support requires the Mvp.Xml library version 2.0 (assembly version 2.0.2158.1055) available at http://www.xmlmvp.org/. Insert Mvp.Xml.dll to GAC in order to enable EXSLT support..
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.HandlerNotAllowed">
+            <summary>
+              Looks up a localized string similar to Not allowed to call handler &apos;{0}()&apos;.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.InvalidNodeType">
+            <summary>
+              Looks up a localized string similar to Invalid node type.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.InvalidParameterKey">
+            <summary>
+              Looks up a localized string similar to Invalid array key (must be string).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.InvalidStateError">
+            <summary>
+              Looks up a localized string similar to Invalid state error.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.NotYetImplemented">
+            <summary>
+              Looks up a localized string similar to Not yet implemented.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.PostLoadDtdUnsupported">
+            <summary>
+              Looks up a localized string similar to Post-load DTD schema validation is not supported.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.RelaxNGUnsupported">
+            <summary>
+              Looks up a localized string similar to RELAX NG schema validation is not supported.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.SimpleXmlAssignmentToDuplicateNodes">
+            <summary>
+              Looks up a localized string similar to Cannot assign to an array of nodes (duplicate subnodes of name &apos;{0}&apos; detected).
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.SimpleXmlImportNotAssociated">
+            <summary>
+              Looks up a localized string similar to The imported node must be associated with an XML document.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.SimpleXmlInvalidClassName">
+            <summary>
+              Looks up a localized string similar to Class &apos;{0}&apos; is not derived from SimpleXMLElement..
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.SimpleXmlInvalidNodeToImport">
+            <summary>
+              Looks up a localized string similar to Invalid node type. Only instances of DOMElement and DOMDocument (contaning the root element) can be imported.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.SimpleXmlNotImplemented">
+            <summary>
+              Looks up a localized string similar to Cooperation with the SimpleXML extension is not implemented.
+            </summary>
+        </member>
+        <member name="P:PHP.Library.Xml.Resources.SimpleXmlUnsupportedWriteConversion">
+            <summary>
+              Looks up a localized string similar to It is not possible to assign complex types to nodes.
+            </summary>
+        </member>
+        <member name="T:PHP.Library.Xml.XmlDomLibraryDescriptor">
+            <summary>
+            Describes the class library assembly content and configuration.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XmlDomLibraryDescriptor.Loaded(PHP.Core.PhpLibraryAttribute,PHP.Core.LibraryConfigStore)">
+            <summary>
+            Called by the Core after the library is loaded.
+            </summary>
+        </member>
+        <member name="M:PHP.Library.Xml.XmlDomLibraryDescriptor.ParseConfig(PHP.Core.ConfigContextBase,PHP.Core.PhpConfigurationContext,System.Xml.XmlNode)">
+            <summary>
+            Parses a configuration section belonging to the XmlDom library. 
+            </summary>
+            <param name="result">A configuration context.</param>
+            <param name="context">The context of the configuration created by Phalanger Core.</param>
+            <param name="section">A XML node containing the configuration or its part.</param>
+            <returns>Updated configuration context.</returns>
+        </member>
+        <member name="M:PHP.Library.Xml.XmlDomLibraryDescriptor.CreateConfigContext">
+            <summary>
+            Creates empty library configuration context.
+            </summary>
+            <returns>An initialized configuration context. Should not be a <B>null</B> reference.</returns>
+        </member>
+        <member name="P:PHP.Library.Xml.XmlDomLibraryDescriptor.Singleton">
+            <summary>
+            Stores one and only instance of the class that is created when the assembly is loaded.
+            </summary>
+        </member>
+    </members>
+</doc>

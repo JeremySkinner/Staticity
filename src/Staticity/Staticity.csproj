@@ -44,12 +44,32 @@
     <Reference Include="Castle.Core">
       <HintPath>..\..\packages\TemplateEngine\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Geshi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\geshi\Geshi.dll</HintPath>
+    </Reference>
     <Reference Include="MarkdownSharp">
       <HintPath>..\..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.0.2.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Newtonsoft.Json.4.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PhpNetClassLibrary, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4af37afe3cde05fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\geshi\PhpNetClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PhpNetCore, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0a8e8c4c76728c71, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\geshi\PhpNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PhpNetCore.IL, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0a8e8c4c76728c71, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\geshi\PhpNetCore.IL.dll</HintPath>
+    </Reference>
+    <Reference Include="PhpNetXmlDom, Version=2.1.0.0, Culture=neutral, PublicKeyToken=2771987119c16a03, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\geshi\PhpNetXmlDom.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,6 +89,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticityEngine.cs" />
+    <Compile Include="SyntaxHighlighter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
