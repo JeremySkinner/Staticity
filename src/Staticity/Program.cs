@@ -8,7 +8,8 @@ namespace Staticity {
 		static void Main(string[] args) {
 			Console.WriteLine("Staticity (c) Jeremy Skinner 2011");
 
-
+			var engine = new StaticityEngine();
+			engine.Process(Environment.CurrentDirectory);
 		}
 	}
 }
