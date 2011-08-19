@@ -54,5 +54,11 @@
 			var postContent = File.ReadAllLines("../../TestSite/_site/2011/07/25/simple-markdown/index.html");
 			postContent.ShouldEqual(new[] { "Layout", "<h1>Test 1 2 3</h1>", "", "End Layout" });
 		}
+
+		[Test]
+		public void SyntaxHighlight() {
+			var postContent = File.ReadAllLines("../../TestSite/_site/2011/07/25/syntax/index.html");
+			StringAssert.StartsWith("<pre class=\"csharp\" style=\"font-family:monospace;\"><span style=\"color: #FF0000;\">class</span>", postContent[0]);
+		}
 	}
 }

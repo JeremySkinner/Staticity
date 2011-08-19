@@ -95,6 +95,9 @@
     <Content Include="TestSite\_posts\2011-07-25-simple-post-categories.html" />
     <Content Include="TestSite\_posts\2011-07-25-with-layout-and-viewdata.html" />
     <Content Include="TestSite\_posts\2011-07-25-title-and-date.html" />
+    <Content Include="TestSite\_posts\2011-07-25-syntax.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="TestSite\_posts\2011-07-25-simple-markdown.md" />
   </ItemGroup>
   <ItemGroup>
