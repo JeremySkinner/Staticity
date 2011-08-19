@@ -2,6 +2,7 @@
 	using System.IO;
 	using NUnit.Framework;
 	using Should;
+	using System.Linq;
 
 	[TestFixture]
 	public class StaticSiteTests {
@@ -58,7 +59,9 @@
 		[Test]
 		public void SyntaxHighlight() {
 			var postContent = File.ReadAllLines("../../TestSite/_site/2011/07/25/syntax/index.html");
-			StringAssert.StartsWith("<pre class=\"csharp\" style=\"font-family:monospace;\"><span style=\"color: #FF0000;\">class</span>", postContent[0]);
+			postContent[0].ShouldEqual("<div class=\"syntax\"><div class=\"code\">");
+			StringAssert.StartsWith("<pre class=\"csharp\" style=\"font-family:monospace;\"><span style=\"color: #FF0000;\">class</span>", postContent[1]);
+			StringAssert.EndsWith("</div></div>", postContent.Last());
 		}
 	}
 }

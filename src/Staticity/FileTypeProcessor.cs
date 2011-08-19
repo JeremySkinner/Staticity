@@ -3,8 +3,6 @@
 	using System.Collections;
 	using System.Collections.Generic;
 	using System.IO;
-	using Castle.Components.Common.TemplateEngine;
-	using Castle.Components.Common.TemplateEngine.NVelocityTemplateEngine;
 	using MarkdownSharp;
 
 	public class FileTypeProcessor {
@@ -15,7 +13,7 @@
 		public FileTypeProcessor(string basePath) {
 			this.basePath = basePath;
 			engine = new NVelocityTemplateEngine(basePath);
-			engine.BeginInit();
+			engine.Initialize();
 		}
 
 		public void WritePost(Post post, string fileName, string basePath, string postsPath) {
