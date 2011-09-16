@@ -78,5 +78,10 @@
 			var postContent = File.ReadAllLines("../../TestSite/_site/index.html");
 			postContent.ShouldEqual(new[] { "Hello bar" });
 		}
+
+		[Test]
+		public void External_content() {
+			File.Exists("../../TestSite/_site/content/foo.txt").ShouldBeTrue();
+		}
 	}
 }

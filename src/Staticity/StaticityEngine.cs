@@ -64,6 +64,18 @@
 				var outputPath = Path.Combine(destinationPath, "index.html");
 				_fileTypes[".html"].WritePost(indexPage, outputPath);
 			}
+
+			var contentPath = new DirectoryInfo(Path.Combine(basePath, "_content"));
+			if(contentPath.Exists) {
+				IOHelper.CopyFilesRecursively(contentPath, new DirectoryInfo(Path.Combine(destinationPath, "content")));
+			}
+
+			// Do the same for wp_content too, because I still have old format wordpress posts.
+
+			contentPath = new DirectoryInfo(Path.Combine(basePath, "wp_content"));
+			if (contentPath.Exists) {
+				IOHelper.CopyFilesRecursively(contentPath, new DirectoryInfo(Path.Combine(destinationPath, "content")));
+			}
 		}
 	}
 }

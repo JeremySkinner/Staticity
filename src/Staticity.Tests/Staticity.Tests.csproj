@@ -88,6 +88,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="TestSite\Index.html" />
+    <Content Include="TestSite\_content\foo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestSite\_layouts\simple-with-categories.html" />
     <Content Include="TestSite\_layouts\nested.html" />
     <Content Include="TestSite\_layouts\simple.html" />
